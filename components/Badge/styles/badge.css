@@ -1,0 +1,36 @@
+.badge-wrapper, .badge-wrapper--standard, .badge-wrapper--smaller, .badge-wrapper--small {
+    border-radius: 100%;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+    background-color: #fc9306;
+    color: white;
+    font-size: 16px;
+    display: inline-flex;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.badge-wrapper .badge__icon, .badge-wrapper--standard .badge__icon, .badge-wrapper--smaller .badge__icon, .badge-wrapper--small .badge__icon {
+    margin: auto;
+}
+
+.badge-wrapper--standard {
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
+}
+
+.badge-wrapper--standard .badge__icon {
+    padding-top: 2px;
+}
+
+.badge-wrapper--smaller {
+    height: 24px;
+    width: 24px;
+}
+
+.badge-wrapper--small {
+    height: 32px;
+    width: 32px;
+}
+
+/*# sourceMappingURL=badge.css.map */

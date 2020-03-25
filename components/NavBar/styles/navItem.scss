@@ -1,0 +1,131 @@
+@import '../../../Themes/colours';
+
+@mixin widthAnimation {
+  transition: width 0.5s ease;
+}
+
+@mixin visibilityAnimation {
+  transition: visibility 0.3s ease 0.3s,
+  opacity 0.4s ease 0.3s;
+}
+
+@mixin active {
+  border-left: 3.5px solid $primary-orange;
+}
+
+@mixin navItem_defaults {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  background-color: $white;
+  z-index: 3;
+
+  &:hover {
+    color: $primary-orange;
+    background-color: $disabled-grey;
+  }
+}
+
+@mixin itemContentGrid {
+  display: inline-grid;
+  grid-template-areas: "icon label";
+  grid-template-columns: 64px 326px;
+  grid-auto-flow: column;
+  grid-template-rows: 64px;
+
+}
+
+
+.navbar-wrapper-open, .navbar-wrapper-close {
+  .active-navItem {
+    .nav-item-open, .nav-item-close {
+      background-color: $disabled-grey;
+
+      &:hover {
+        background-color: $disabled-grey;
+      }
+
+      @include active
+    }
+  }
+
+  .inactive-navItem {
+    .nav-item-open, .nav-item-close {
+      border-left: 3.5px solid transparent;
+    }
+  }
+
+
+
+}
+
+.nav-item-wrapper {
+  list-style-type: none;
+
+  > a {
+    text-decoration: none;
+  }
+
+
+  .nav-item-close {
+    @include navItem_defaults;
+    width: 64px;
+    @include widthAnimation;
+
+    .navitem-content-wrapper {
+      display:block;
+      width:64px;
+    }
+
+    .nav-item-label {
+      grid-column: label;
+      visibility: hidden;
+      opacity: 0;
+      width: 0;
+      @include visibilityAnimation;
+    }
+
+    .nav-item-icon-wrapper {
+      font-size: 18px;
+      height: 18px;
+      margin: 23px 23px 23px 19px;
+    }
+
+
+  }
+
+  .nav-item-open {
+    @include navItem_defaults;
+    width: 390px;
+    @include widthAnimation;
+
+    .navitem-content-wrapper {
+      @include itemContentGrid;
+    }
+
+    .nav-item-icon-wrapper {
+      font-size: 18px;
+      margin: 23px 23px 23px 19px;
+    }
+
+    .nav-item-label {
+      visibility: visible;
+      text-align: left;
+      opacity: 1;
+      font-weight: 400;
+      -webkit-text-fill-color: $black;
+      font-size: 21px;
+      letter-spacing: 0;
+      line-height: 1.2;
+      margin: 19.5px 0 0 0;
+      @include visibilityAnimation;
+    }
+  }
+
+
+}
+
+

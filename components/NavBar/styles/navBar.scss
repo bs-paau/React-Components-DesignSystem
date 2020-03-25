@@ -1,0 +1,128 @@
+@import '../../../Themes/colours';
+@import '../../../Themes/typography';
+
+@mixin widthAnimation {
+  transition: width 0.5s ease;
+}
+
+@mixin textAnimation {
+  transition: visibility 0.3s ease 0.3s,
+  opacity 0.4s ease 0.3s;
+}
+
+@mixin wrapper_defaults {
+  height: 100vh;
+  background-color: $white;
+  box-sizing: border-box;
+  box-shadow: $active-grey 0 4px 16px 0px;
+  z-index: 3;
+  font-size: $paragraph-standard;
+  font-family: $base-font;
+  color: $black;
+}
+
+@mixin header_defaults {
+  height: 64px;
+  width: inherit;
+  display: inline-grid;
+  grid-template-columns: 64px 326px;
+  grid-template-areas: "headerIcon headerLabel";
+  grid-template-rows: 64px;
+  border-bottom: 1px solid $disabled-grey;
+
+}
+
+@mixin toggleButton_defaults {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 0;
+  outline: none;
+  background-color: $white;
+}
+
+.header-toggle-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: headerIcon;
+
+  .nav-header-icon {
+    font-size: 18px;
+  }
+}
+
+.navbar-wrapper-close {
+
+  width: 64px;
+  @include wrapper_defaults;
+  @include widthAnimation;
+
+  .nav-header {
+    @include header_defaults;
+    width: inherit;
+
+    .nav-header-icon {
+      @include toggleButton_defaults;
+    }
+
+    .nav-header-label {
+      width: 0;
+      visibility: hidden;
+      opacity: 0;
+      @include textAnimation
+    }
+  }
+}
+
+.navbar-wrapper-open {
+
+  @include wrapper_defaults;
+  width: 390px;
+  @include widthAnimation;
+
+
+  .nav-header {
+    @include header_defaults;
+    width: inherit;
+
+    .nav-header-icon {
+      @include toggleButton_defaults;
+    }
+
+    .nav-header-label {
+      grid-column: headerLabel;
+      font-size: $h3;
+      height: 45px;
+      line-height: 1.2;
+      margin: 18px 0 0 0;
+      display: inline-flex;
+      visibility: visible;
+      opacity: 1;
+      @include textAnimation
+    }
+  }
+
+  .navbar-logo {
+    width: 170px;
+    height: 24px;
+    position: absolute;
+    left: 116px;
+    bottom: 28px;
+  }
+
+}
+
+
+/*this part  is used to work only for the storybook and dashbord, not for the component*/
+
+.storybook-display {
+  .navbar-wrapper-open, .navbar-wrapper-close {
+    &:first-of-type {
+      margin-right: 120px;
+    }
+
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+}

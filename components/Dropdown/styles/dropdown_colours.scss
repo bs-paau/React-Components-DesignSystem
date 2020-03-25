@@ -1,0 +1,50 @@
+@import '../../../Themes/colours';
+
+
+.dropdown-is-disabled {
+  color: $active-grey;
+  background: $white;
+}
+
+.dropdown__list-is-open {
+  box-shadow: rgba($black, 0.25) 0 4px 16px 0;
+}
+
+.dropdown-is-open {
+  background-color: $white;
+  box-shadow: rgba($black, 0.25) 0 4px 16px 0;
+}
+
+.dropdown-is-closed {
+  background-color: $disabled-grey;
+
+  &:hover {
+    background-color: $primary-orange;
+  }
+}
+
+.dropdown__header {
+  background-color: inherit;
+}
+
+
+.dropdown__option {
+  background-color: $white;
+
+  &:hover {
+    background-color: $disabled-grey;
+  }
+}
+
+.dropdown__button {
+  background: transparent;
+
+  .dropdown__icon {
+    color: inherit;
+    background-color: inherit;
+  }
+}
+
+.dropdown__content {
+  color: inherit;
+}

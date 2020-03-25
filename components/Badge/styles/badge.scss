@@ -1,0 +1,43 @@
+@import '../../../Themes/colours.scss';
+@import '../../../Themes/typography.scss';
+
+.badge-wrapper {
+  border-radius: 100%;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.15);
+  background-color: $primary-orange;
+  color: $white;
+  font-size: $paragraph-standard;
+  display: inline-flex;
+  box-sizing: border-box;
+  text-align: center;
+
+  .badge__icon {
+    margin: auto;
+  }
+}
+
+.badge-wrapper--standard {
+  @extend .badge-wrapper;
+  height: 40px;
+  width: 40px;
+  font-size: $icon-size;
+
+  .lbc-badge__icon {
+    padding-top: 2px;
+  }
+}
+
+
+.badge-wrapper--smaller {
+  @extend .badge-wrapper;
+  height: 24px;
+  width: 24px;
+}
+
+
+.badge-wrapper--small {
+  @extend .badge-wrapper;
+  height: 32px;
+  width: 32px;
+}
+

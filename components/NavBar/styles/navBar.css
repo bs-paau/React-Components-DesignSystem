@@ -1,0 +1,115 @@
+.header-toggle-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: headerIcon;
+}
+
+.header-toggle-wrapper .nav-header-icon {
+    font-size: 18px;
+}
+
+.navbar-wrapper-close {
+    width: 64px;
+    height: 100vh;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 4px 16px 0px;
+    z-index: 3;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    transition: width 0.5s ease;
+}
+
+.navbar-wrapper-close .nav-header {
+    height: 64px;
+    width: inherit;
+    display: inline-grid;
+    grid-template-columns: 64px 326px;
+    grid-template-areas: "headerIcon headerLabel";
+    grid-template-rows: 64px;
+    border-bottom: 1px solid #e6e5e3;
+    width: inherit;
+}
+
+.navbar-wrapper-close .nav-header .nav-header-icon {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 0;
+    outline: none;
+    background-color: white;
+}
+
+.navbar-wrapper-close .nav-header .nav-header-label {
+    width: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease 0.3s, opacity 0.4s ease 0.3s;
+}
+
+.navbar-wrapper-open {
+    height: 100vh;
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 4px 16px 0px;
+    z-index: 3;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    width: 390px;
+    transition: width 0.5s ease;
+}
+
+.navbar-wrapper-open .nav-header {
+    height: 64px;
+    width: inherit;
+    display: inline-grid;
+    grid-template-columns: 64px 326px;
+    grid-template-areas: "headerIcon headerLabel";
+    grid-template-rows: 64px;
+    border-bottom: 1px solid #e6e5e3;
+    width: inherit;
+}
+
+.navbar-wrapper-open .nav-header .nav-header-icon {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 0;
+    outline: none;
+    background-color: white;
+}
+
+.navbar-wrapper-open .nav-header .nav-header-label {
+    grid-column: headerLabel;
+    font-size: 24px;
+    height: 45px;
+    line-height: 1.2;
+    margin: 18px 0 0 0;
+    display: inline-flex;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.3s ease 0.3s, opacity 0.4s ease 0.3s;
+}
+
+.navbar-wrapper-open .navbar-logo {
+    width: 170px;
+    height: 24px;
+    position: absolute;
+    left: 116px;
+    bottom: 28px;
+}
+
+/*this part  is used to work only for the storybook and dashbord, not for the component*/
+.storybook-display .navbar-wrapper-open, .storybook-display .navbar-wrapper-close {
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.storybook-display .navbar-wrapper-open:first-of-type, .storybook-display .navbar-wrapper-close:first-of-type {
+    margin-right: 120px;
+}
+
+/*# sourceMappingURL=navBar.css.map */

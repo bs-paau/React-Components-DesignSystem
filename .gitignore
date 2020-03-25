@@ -1,0 +1,11 @@
+.idea/
+dist
+.cache/
+/node_modules/
+
+### Ignoring all the .sass-cache files
+/.sass-cache/
+.sass-cache
+
+### Ignoring all the component css.map files
+*.css.map

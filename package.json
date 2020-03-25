@@ -1,0 +1,79 @@
+{
+  "name": "design-system-patrick-auer",
+  "private": true,
+  "version": "0.0.1",
+  "license": "free",
+  "scripts": {
+    "prepublishOnly": "echo \"Error: not allowed to publish\" && exit 1",
+    "storybook": "cross-env NODE_ENV=development start-storybook -p 6005",
+    "deploy-storybook": "storybook-to-ghpages",
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "build": "webpack -p",
+    "start": "webpack --watch",
+    "docker:storybook": "start-storybook -p 65200 --ci",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@fortawesome/free-regular-svg-icons": "^5.11.2",
+    "@storybook/addon-docs": "^5.3.13",
+    "cross-env": "^7.0.0",
+    "framer-motion": "^1.6.15",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-grid-system": "^6.0.2",
+    "react-select": "^3.0.8",
+    "react-slider": "^1.0.2",
+    "styled-components": "^5.0.0"
+  },
+  "jest": {
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.md?$": "markdown-loader-jest",
+      "^.+\\.js?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "@storybook/addons": "<rootDir>/../storybook-readme/node_modules/@storybook/addons"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-syntax-jsx": "^7.8.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.8.3",
+    "@babel/plugin-transform-react-display-name": "^7.8.3",
+    "@babel/plugin-transform-react-jsx": "^7.8.3",
+    "@babel/plugin-transform-react-jsx-self": "^7.8.3",
+    "@babel/plugin-transform-react-jsx-source": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7",
+    "@nivo/bar": "^0.61.1",
+    "@nivo/core": "^0.61.0",
+    "@nivo/line": "^0.61.1",
+    "@storybook/addon-actions": "^5.3.10",
+    "@storybook/addon-storysource": "^5.3.10",
+    "@storybook/addons": "^5.3.10",
+    "@storybook/react": "^5.3.10",
+    "auto-changelog": "^1.16.1",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^3.4.0",
+    "file-loader": "^5.0.2",
+    "html-loader": "^0.5.5",
+    "lint-staged": "^10.0.2",
+    "node-sass": "^4.13.1",
+    "prismjs": "^1.19.0",
+    "react-test-renderer": "^16.8.3",
+    "sass": "^1.23.7",
+    "sass-loader": "^8.0.2",
+    "storybook-readme": "^5.0.5",
+    "style-loader": "^1.1.0",
+    "typescript": "^3.5.3",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.10.2"
+  }
+}

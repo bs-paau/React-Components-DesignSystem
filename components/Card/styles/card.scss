@@ -1,0 +1,61 @@
+@import '../../../Themes/colours';
+@import '../../../Themes/typography';
+
+
+.card-wrapper {
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: $base-font;
+    font-size: $paragraph-standard;
+    overflow: hidden;
+    position:relative;
+
+    &.white {
+      background-color: $white;
+      border: 1px solid $hover-grey;
+      color: $black;
+    }
+
+    &.greyDark {
+      background-color: $active-grey;
+      border: 1px solid transparent;
+      color: $white;
+    }
+
+    &.orangeStandard {
+      background-color: $primary-orange;
+      border: 1px solid transparent;
+      color: $white;
+    }
+
+    &:hover, &:focus{
+      box-shadow: $s-black-box-shadow 0 4px 16px 0px;
+    }
+}
+
+.card-wrapper-no-border{
+  position: relative;
+  box-sizing: border-box;
+  background-color: $white;
+  font-family: $base-font;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2px 0px;
+
+  &.white {
+    background-color: $white;
+    color: $black;
+  }
+
+  &.greyDark {
+    background-color: $active-grey;
+    color: $white;
+  }
+
+  &.orangeStandard {
+    background-color: $primary-orange;
+    color: $white;
+  }
+
+  &:hover, &:focus{
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 12px 0px;
+  }
+}

@@ -1,0 +1,48 @@
+@import 'checkbox_colours';
+@import '../../../Themes/typography';
+
+.checkbox {
+  display: inline-flex;
+  font-size: $paragraph-standard;
+  font-family: $base-font;
+  align-items: center;
+}
+
+.checkbox-is-disabled .checkbox__input:hover {
+  cursor: not-allowed;
+}
+
+.checkbox__label {
+  margin: 0.2em 0.4em 0.2em 0.3em;
+  font-size: $paragraph-standard;
+  font-family: $base-font;
+}
+
+.checkbox__input {
+  margin: 0.3em 0.3em 0.3em 0.3em;
+  font-size: $paragraph-standard;
+  width: 18px;
+  height: 18px;
+  border-width: 1px;
+  border-style: solid;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  @supports (display:-ms-grid) {
+    border-width: 1.6px;
+  }
+
+  &:disabled {
+    border: 0.1em solid;
+  }
+
+  &:checked {
+    width: 18px;
+    height: 18px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('../../Assets/check-solid.svg');
+  }
+}

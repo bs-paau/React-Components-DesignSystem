@@ -1,0 +1,26 @@
+@import '../../../Themes/colours';
+
+.nav-header {
+  display: inline-flex;
+  height: 64px;
+  width: 390px;
+  box-sizing: border-box;
+  border-bottom: 1px solid $disabled-grey;
+  z-index: 3;
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+  margin: 23px;
+}
+
+.nav-header-label {
+  tab-size: 4;
+  font-weight: 400;
+  -webkit-text-fill-color: $black;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 1.2;
+  margin: 18px 0 0 0;
+}

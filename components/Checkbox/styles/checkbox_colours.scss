@@ -1,0 +1,35 @@
+@import '../../../Themes/colours';
+
+.checkbox__label {
+  color: $active-grey;
+}
+
+.checkbox__input {
+  appearance: none;
+  -webkit-appearance: none;
+  user-select: none;
+
+
+  &:focus {
+    outline: none;
+  }
+
+  &:not(:checked) {
+    &:not(:disabled) {
+      border-color: $active-grey;
+    }
+
+    &:disabled {
+      border-color: $disabled-grey;
+    }
+  }
+
+  &:checked {
+    background-color: $primary-orange;
+    border-color: $primary-orange;
+
+    &:disabled {
+      border-color: $disabled-grey;
+    }
+  }
+}

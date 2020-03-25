@@ -1,0 +1,59 @@
+.card-wrapper {
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-wrapper.white {
+    background-color: white;
+    border: 1px solid #e6e5e3;
+    color: black;
+}
+
+.card-wrapper.greyDark {
+    background-color: #605e5b;
+    border: 1px solid transparent;
+    color: white;
+}
+
+.card-wrapper.orangeStandard {
+    background-color: #fc9306;
+    border: 1px solid transparent;
+    color: black;
+}
+
+.card-wrapper:hover, .card-wrapper:focus {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 4px 16px 0px;
+}
+
+.card-wrapper-no-border {
+    position: relative;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2px 0px;
+}
+
+.card-wrapper-no-border.white {
+    background-color: white;
+    color: black;
+}
+
+.card-wrapper-no-border.greyDark {
+    background-color: #605e5b;
+    color: white;
+}
+
+.card-wrapper-no-border.orangeStandard {
+    background-color: #fc9306;
+    color: black;
+}
+
+.card-wrapper-no-border:hover, .card-wrapper-no-border:focus {
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 12px 0px;
+}
+
+/*# sourceMappingURL=card.css.map */

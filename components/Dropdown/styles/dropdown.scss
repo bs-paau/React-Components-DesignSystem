@@ -1,0 +1,132 @@
+@import '../../../Themes/typography.scss';
+@import 'dropdown_colours';
+
+
+@mixin dropdown_defaults {
+  height: 2.5em;
+  font-size: $paragraph-standard;
+  font-family: $base-font;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  min-width: 200px;
+}
+
+.dropdown {
+
+  &-is-closed {
+    @include dropdown_defaults;
+
+    .dropdown__list-is-closed {
+      display: none;
+    }
+
+    .dropdown__header {
+      color: $black;
+      width: 100%;
+    }
+  }
+
+  &-is-open {
+    @include dropdown_defaults;
+
+    .dropdown__header {
+      color: $black;
+      width: 100%;
+    }
+
+    .dropdown__list-is-open {
+      padding: 0;
+      position: absolute;
+      margin-top: 8px;
+      margin-bottom: 0;
+      max-height: 340px;
+      overflow-y: auto;
+      font-size: $paragraph-standard;
+      display: flex;
+      flex-flow: column wrap;
+      width: 100%;
+    }
+  }
+}
+
+
+.dropdown__button {
+  font-size: $icon-size;
+  float: right;
+  outline: none;
+  border: none;
+  padding: 0 0.57em 0 0;
+  margin-bottom: 1em;
+  height: 20px;
+  width: max-content;
+  box-sizing: border-box;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+
+.dropdown__option {
+  max-width: inherit;
+  box-sizing: border-box;
+  padding: 11.5px 9px;
+  height: 2.5em;
+  list-style: none;
+  font-size: $paragraph-standard;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  color: $black;
+}
+
+.dropdown__header {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0 0 0 0.6em;
+  margin: 0.56em 0;
+  outline: none;
+  text-align: left;
+  height: 1.125em;
+  line-height: 1.2;
+  overflow: hidden;
+  min-width: max-content;
+  font-size: $paragraph-standard;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown__content {
+  margin-top: 0;
+  outline: none;
+  border: none;
+  font-size: $paragraph-standard;
+}
+
+.dropdown__icon {
+  padding-bottom: 1.5em;
+}
+
+
+.dropdown-is-disabled {
+  cursor: not-allowed;
+  height: 2.5em;
+  font-size: $paragraph-standard;
+  font-family: $base-font;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-width: max-content;
+  width: 100%;
+
+  .dropdown__header {
+    color: $active-grey;
+  }
+
+  .dropdown__list-is-closed {
+    display: none;
+  }
+
+}

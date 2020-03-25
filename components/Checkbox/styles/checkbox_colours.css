@@ -1,0 +1,32 @@
+.input-checkbox-label {
+    color: #787673;
+}
+
+.input-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    user-select: none;
+}
+
+.input-checkbox:focus {
+    outline: none;
+}
+
+.input-checkbox:not(:checked):not(:disabled) {
+    border-color: #797979;
+}
+
+.input-checkbox:not(:checked):disabled {
+    border-color: #e6e5e3;
+}
+
+.input-checkbox:checked {
+    background-color: #fc9306;
+    border-color: #fc9306;
+}
+
+.input-checkbox:checked:disabled {
+    border-color: #e6e5e3;
+}
+
+/*# sourceMappingURL=checkbox_colours.css.map */
